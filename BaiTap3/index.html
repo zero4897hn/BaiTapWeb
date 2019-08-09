@@ -174,11 +174,7 @@
     	$(document).ready(function() {
             $('table.table.table-borderless button').click(function() {
                 $(this).addClass('selected-button');
-                $(this).nextAll().removeClass('selected-button');
-                $(this).prevAll().removeClass('selected-button');
-                // var buttonsInLine = $(this).parents('tr').find('button');
-                // buttonsInLine.nextAll();
-                // console.log();
+                $(this).parents('tr').find('button').not($(this)).removeClass('selected-button');
             });
     	});
     </script>
